@@ -18,8 +18,22 @@
     --overlay-dark-color: rgba(0, 0, 0, 0.6);
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+header, .category-list {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--white-color);
+}
+
 .navbar {
     display: flex;
+    gap: 2rem;
     align-items: center;
     padding: 0.5rem 1rem;
     justify-content: space-between;
@@ -102,6 +116,7 @@
 
 .main-layout {
     display: flex;
+    overflow: auto;
 }
 
 .main-layout .content-wrapper {
@@ -127,6 +142,23 @@
     padding: 0.4rem 0.75rem;
     border-radius: 0.5rem;
     background: var(--ligh-gray-color);
+}
+
+.category-list .category-button.active {
+    color: var(--white-color);
+    background: var(--black-color);
+    pointer-events: none;
+}
+
+.category-list .category-button:hover {
+    background: var(--border-color);
+}
+
+.content-wrapper .video-list {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem 0 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .video-list .video-card {
@@ -170,6 +202,14 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--black-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.video-list .video-card .title:hover {
+    color: var(--primary-color);
 }
 
 .video-list .video-card p {
