@@ -121,6 +121,7 @@ header, .category-list {
 
 .main-layout .sidebar {
     width: 280px;
+    padding: 0 0.7rem 0;
     background: var(--white-color);
 }
 
@@ -139,9 +140,9 @@ header, .category-list {
 .sidebar .link-section .link-item {
     display: flex;
     align-items: center;
-    font-size: 0.983rem;
+    font-size: 0.938rem;
     white-space: nowrap;
-    padding: 0.37rem 0.75;
+    padding: 0.37rem 0.75rem;
     margin-bottom: 0.25rem;
     color: var(--black-color);
     border-radius: 0.5rem;
@@ -158,10 +159,16 @@ header, .category-list {
 }
 
 .sidebar .link-section .section-title {
-    font-size: 0.983rem;
-    font-size: 600;
+    font-size: 0.938rem;
+    font-weight: 600;
     color: var(--black-color);
-    margin: 1 rem 0. 0.5 0.5;
+    margin: 1rem 0 0.5rem 0.5rem;
+}
+
+.sidebar .section-separator {
+    height: 1px;
+    margin: 0.625rem 0;
+    background: var(--ligh-gray-color);
 }
 
 .main-layout .content-wrapper {
